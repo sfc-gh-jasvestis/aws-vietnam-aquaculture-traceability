@@ -118,7 +118,7 @@ Industry research and Snowflake customer outcomes:
 - **80% of Vietnam's shrimp comes from 600,000+ smallholder farms in Ca Mau, Bac Lieu, and Soc Trang provinces** — [World Bank Vietnam](https://www.worldbank.org/en/country/vietnam/overview)
 - **ASC-certified shrimp commands 10-20% price premium — only 8% of Vietnam's production is certified** — [ASC Aquaculture](https://www.asc-aqua.org/programme/shrimp/)
 - **EU IUU regulation requires catch documentation for all imported seafood — Vietnam received yellow card in 2017** — [European Commission DG MARE](https://oceans-and-fisheries.ec.europa.eu/fisheries/rules/illegal-fishing_en)
-- **Sysco** (Snowflake customer): unified supplier quality and traceability data on Snowflake across 330K+ restaurant customers and 600K+ delivery points -- [snowflake.com/customers/sysco](https://www.snowflake.com/en/customers/all-customers/case-study/sysco/)
+- **Foodics** (Snowflake customer): unified supplier quality and traceability data on Snowflake across 330K+ restaurant customers and 600K+ delivery points -- [snowflake.com/customers/foodics](https://www.snowflake.com/en/customers/all-customers/case-study/foodics/)
 
 ## Key Demo Numbers
 
