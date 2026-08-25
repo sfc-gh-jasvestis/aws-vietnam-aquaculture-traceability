@@ -115,8 +115,8 @@ Run all scripts including AWS integration. Deploy QuickSight dashboard from `qui
 ## Business Impact
 
 Industry research and Snowflake customer outcomes:
-- **80% of Vietnam's shrimp comes from 600,000+ smallholder farms in Ca Mau, Bac Lieu, and Soc Trang provinces** — [World Bank Vietnam](https://www.worldbank.org/en/country/vietnam/publication/vietnam-development-report-2024)
-- **ASC-certified shrimp commands 10-20% price premium — only 8% of Vietnam's production is certified** — [ASC Aquaculture](https://www.asc-aqua.org/what-we-do/our-standards/shrimp/)
+- **80% of Vietnam's shrimp comes from 600,000+ smallholder farms in Ca Mau, Bac Lieu, and Soc Trang provinces** — [World Bank Vietnam](https://www.worldbank.org/en/country/vietnam/overview)
+- **ASC-certified shrimp commands 10-20% price premium — only 8% of Vietnam's production is certified** — [ASC Aquaculture](https://www.asc-aqua.org/programme/shrimp/)
 - **EU IUU regulation requires catch documentation for all imported seafood — Vietnam received yellow card in 2017** — [European Commission DG MARE](https://oceans-and-fisheries.ec.europa.eu/fisheries/rules/illegal-fishing_en)
 - **Thai Union (world's largest tuna company) built full supply chain traceability on Snowflake** — [Snowflake Customers](https://www.snowflake.com/en/customers/all-customers/)
 
