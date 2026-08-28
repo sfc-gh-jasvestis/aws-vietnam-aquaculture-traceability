@@ -35,36 +35,36 @@ export default function HomePage() {
   const executiveCockpit = (
     <div className="space-y-6">
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        <KPICard title="Total Harvest" value="₫2.4B" status="neutral" />
-        <KPICard title="Water Quality" value="7" status="warning" />
-        <KPICard title="Anomalies Detected" value="3" status="danger" />
-        <KPICard title="Active Farms" value="124" status="neutral" />
+        <KPICard title="Traceability Coverage" value="94%" status="neutral" />
+        <KPICard title="Batches Tracked" value="42K" status="neutral" />
+        <KPICard title="Harvest-to-Export" value="4.2 days" status="neutral" />
+        <KPICard title="Certified Farms" value="2,847" status="neutral" />
       </div>
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
         <Chart
           data={data?.timeseries || [{ period: 'Loading', value: 0 }]}
           type="line"
           xKey="period"
-          yKeys={[{ key: 'value', name: 'Harvest' }]}
-          title="Harvest Trend (Weekly)"
+          yKeys={[{ key: 'value', name: 'Coverage %' }]}
+          title="Traceability Coverage (Quarterly)"
         />
         <Chart
           data={data?.categories || [{ category: 'Loading', count: 0 }]}
           type="bar"
           xKey="category"
-          yKeys={[{ key: 'count', name: 'Count' }]}
-          title="Water Quality by Farm"
+          yKeys={[{ key: 'count', name: 'Farms' }]}
+          title="Certification by Standard"
         />
       </div>
       <DataTable
         columns={[
           { key: 'id', header: '#' },
-          { key: 'name', header: 'Farm' },
-          { key: 'status', header: 'Status' },
-          { key: 'value', header: 'Harvest' },
+          { key: 'name', header: 'Province' },
+          { key: 'status', header: 'Coverage' },
+          { key: 'value', header: 'Farms Traced' },
         ]}
         data={data?.entities || []}
-        title="Farm Performance"
+        title="Farm Traceability Status"
       />
     </div>
   );
@@ -72,16 +72,16 @@ export default function HomePage() {
   const domainTab1 = (
     <div className="space-y-6">
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
-        <KPICard title="Efficiency" value="87%" />
-        <KPICard title="Utilization" value="72%" />
-        <KPICard title="Growth Rate" value="+8.4%" />
+        <KPICard title="QR-Code Scans/Day" value="14K" />
+        <KPICard title="Farm-to-Plate Time" value="6.2 days" />
+        <KPICard title="Data Completeness" value="97%" />
       </div>
       <Chart
         data={data?.detail || [{ x: 'Loading', y: 0 }]}
         type="area"
         xKey="x"
-        yKeys={[{ key: 'y', name: 'Index' }]}
-        title="Traceability Performance Trend"
+        yKeys={[{ key: 'y', name: 'Visibility %' }]}
+        title="Supply Chain Visibility by Stage"
         height={400}
       />
     </div>
@@ -94,17 +94,17 @@ export default function HomePage() {
           data={data?.breakdown || [{ label: 'A', value: 30 }, { label: 'B', value: 70 }]}
           type="pie"
           xKey="label"
-          yKeys={[{ key: 'value', name: 'Score' }]}
-          title="Risk Distribution"
+          yKeys={[{ key: 'value', name: 'Farms' }]}
+          title="ASC/BAP Certification Progress"
         />
         <ActionMemo
-          persona={{ name: 'Vietnam Operations Lead', role: 'Director of Traceability' }}
+          persona={{ name: 'Le Thi Hong Nhung', role: 'Traceability Director' }}
           context={{}}
           onGenerate={async () => ({
             subject: 'Action Required',
             body: 'AI-generated recommendation based on current data patterns and predicted trends.',
             urgency: 'HIGH',
-            actions: ['Review top water quality findings', 'Optimize farm allocation', 'Prepare quarterly traceability report'],
+            actions: ['Onboard 500 Mekong Delta farms to blockchain traceability', 'Resolve data gap for Ca Mau shrimp processing stage', 'Prepare ASC audit for 12 farms in Ben Tre'],
           })}
         />
       </div>
@@ -116,9 +116,9 @@ export default function HomePage() {
       <AskAI
         title="Ask AI"
         sampleQuestions={[
-          'Which farms have the highest water quality?',
-          'Show harvest trend for the last 30 days',
-          'What is the forecast for next quarter's harvest?',
+          'Which supply chain stages have data gaps?',
+          'Show certification progress vs 2024 target',
+          'How quickly can we trace a batch back to farm of origin?',
         ]}
         mode="both"
         onSubmit={async (question, mode) => {
@@ -178,8 +178,8 @@ export default function HomePage() {
 
   const tabs = [
     { id: 'executive-cockpit', label: 'Executive Cockpit', icon: '📊', content: executiveCockpit },
-    { id: 'domain-1', label: 'Traceability Analytics', icon: '📈', content: domainTab1 },
-    { id: 'domain-2', label: 'Alerts & Actions', icon: '⚡', content: domainTab2 },
+    { id: 'domain-1', label: 'Supply Chain', icon: '📈', content: domainTab1 },
+    { id: 'domain-2', label: 'Certification', icon: '⚡', content: domainTab2 },
     { id: 'ask-ai', label: 'Ask AI', icon: '🤖', content: askAiTab },
     { id: 'architecture', label: 'Architecture & Data', icon: '🏗️', content: architectureTab },
   ];
