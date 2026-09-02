@@ -21,8 +21,8 @@ Snowflake delivers supply chain traceability intelligence for Vietnamese aquacul
 | Database | `VIETNAM_AQUACULTURE_TRACEABILITY` |
 | Service | `VIETNAM_AQUACULTURE_TRACEABILITY_APP` |
 | Compute pool | `SEA_DEMOS_VIETNAM_POOL` |
-| Dimension table | `RAW.DOCUMENTS` (20 rows) |
-| Fact table | `RAW.METRICS` (250,000 rows, 90 days) |
+| Dimension table | `RAW.FARMS` (20 rows) |
+| Fact table | `RAW.BATCH_MOVEMENTS` (250,000 rows, 90 days) |
 | Curated layer | `CURATED.PERFORMANCE_SUMMARY`, `CURATED.TREND_ANALYSIS`, `CURATED.KPI_SUMMARY` |
 | Currency | VND (₫) |
 
@@ -43,9 +43,9 @@ original literal as a fallback, so it still renders if Snowflake is unreachable.
 | Card | Value | Backed by |
 |---|---|---|
 | Traceability Coverage | `94%` | average per event |
-| Batches Tracked | `42K` | total across Documents |
+| Batches Tracked | `42K` | total across Farms |
 | Harvest-to-Export | `4.2 days` | average per event |
-| Certified Farms | `2,847` | total across Documents |
+| Certified Farms | `2,847` | total across Farms |
 | QR-Code Scans/Day | `14K` | average per event |
 | Farm-to-Plate Time | `6.2 days` | average per event |
 | Data Completeness | `97%` | average per event |
