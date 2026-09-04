@@ -54,6 +54,7 @@ export default function HomePage() {
         <div className="lg:col-span-1">
           <GeoMap
             country="vietnam"
+            labels={{ entity: 'Provinces', event: 'Batch Movements', alert: 'Chain Gaps' }}
             regions={data?.regions}
             markers={[{"label": "Can Tho", "value": "Processing hub", "color": "blue", "size": "lg"}, {"label": "Ca Mau", "value": "Shrimp farms: 4.2K", "color": "green", "size": "lg"}, {"label": "Ben Tre", "value": "Pangasius: 1.8K", "color": "green", "size": "md"}, {"label": "Ho Chi Minh City", "value": "Export HQ", "color": "blue", "size": "md"}]}
             routes={[{"from": "Can Tho", "to": "Ho Chi Minh City", "color": "#29B5E8"}]}
@@ -84,8 +85,13 @@ export default function HomePage() {
         columns={[
           { key: 'id', header: '#' },
           { key: 'name', header: 'Province' },
+          { key: 'region', header: 'Region' },
           { key: 'status', header: 'Coverage' },
-          { key: 'value', header: 'Farms Traced' },
+          { key: 'm1', header: 'Farms Traced' },
+          { key: 'm2', header: 'Harvest to Export' },
+          { key: 'm3', header: 'Qr Code Scans Day' },
+          { key: 'events', header: 'Batch Movements' },
+          { key: 'alerts', header: 'Chain Gaps' },
         ]}
         data={data?.entities || []}
         title="Farm Traceability Status"
